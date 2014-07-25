@@ -1,4 +1,16 @@
 
+$light:                           #F5F4EB !default;//beige muy clarito
+$stable:                          #CFDBC4 !default;//verde muy claro
+$balanced:                        #008960 !default;//verde
+$calm:                            #6B9EAC !default;//azul claro
+$positive:                        #356673 !default;//azul
+$energized:                       #F9CF4B !default;//amarillo
+$dark:                            #594C4B !default;//café-gris oscuro
+$royal:                           #4B5161 !default;//púrpura, gris piedra oscuro
+$assertive:                       #C72D2A !default;//rojo
+
+$verde: $balanced;
+
 @import "custom";
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -8,4 +20,3 @@
 @import "cp_load";
 @import "prettyPhoto";
 @import "huilmo";
-

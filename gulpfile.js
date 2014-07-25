@@ -17,7 +17,8 @@ gulp.task('sass', function() {
    gulp.src(['./src/sass/*.scss'])
   .pipe(sass({
     errLogToConsole: true,
-    style: 'expanded'
+    style: 'expanded',
+    sourceComments: 'normal'
   }))
   .pipe(autoprefixer(["last 3 versions", "> 0.5%", "ie 8", "ie 7", "Android 2"]))
   //.pipe(minifycss())

@@ -7,22 +7,37 @@ Aquí empiezan los estilos de la corporación
 	background: url('../images/iphone5s.png') no-repeat 1px 1px;
 	float: left;
 	width: 354px;
-	margin: 0 1em;
+	margin: 0 1em 2em 0;
 	height: 650px;
 	padding: 122px 30px 59px 59px;
-}
-.video-holder iframe{
-	border: 1px solid #000;
+	iframe{
+		border: 1px solid #000;
+	}
 }
 .primera-seccion{
 	margin: 1em 0;
-	width:550px;
+	max-width:640px;
 }
 .bajada{
 	font-family: 'museo300';
 	font-weight:300;
 	font-size:1.25em;
 }
-
-
-
+.badges{
+	text-align: center;
+	h3{
+		font-family: 'museo300';
+		font-weight:300;
+	}
+	img{
+		margin: 0 1em;
+	}
+}
+figure{
+	padding: 1em;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+	figcaption{
+		margin-top: 0.25em;
+	}
+	em,i{font-style: italic;}
+}
