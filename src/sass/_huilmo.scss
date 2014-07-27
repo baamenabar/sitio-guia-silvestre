@@ -3,6 +3,43 @@
 Aquí empiezan los estilos de la corporación
 
 **************************************************************/
+
+/* márgenes rápidos */
+$unidadDeMargen:0.5em;
+.mt1{ margin-top: 1 * $unidadDeMargen; }
+.mt2{ margin-top: 2 * $unidadDeMargen; }
+.mt3{ margin-top: 3 * $unidadDeMargen; }
+.mt4{ margin-top: 4 * $unidadDeMargen; }
+.mb1{ margin-bottom: 1 * $unidadDeMargen; }
+.mb2{ margin-bottom: 2 * $unidadDeMargen; }
+.mb3{ margin-bottom: 3 * $unidadDeMargen; }
+.mb4{ margin-bottom: 4 * $unidadDeMargen; }
+.ml1{ margin-left: 1 * $unidadDeMargen; }
+.ml2{ margin-left: 2 * $unidadDeMargen; }
+.ml3{ margin-left: 3 * $unidadDeMargen; }
+.ml4{ margin-left: 4 * $unidadDeMargen; }
+.mr1{ margin-right: 1 * $unidadDeMargen; }
+.mr2{ margin-right: 2 * $unidadDeMargen; }
+.mr3{ margin-right: 3 * $unidadDeMargen; }
+.mr4{ margin-right: 4 * $unidadDeMargen; }
+
+.pdt1{ padding-top: 1 * $unidadDeMargen; }
+.pdt2{ padding-top: 2 * $unidadDeMargen; }
+.pdt3{ padding-top: 3 * $unidadDeMargen; }
+.pdt4{ padding-top: 4 * $unidadDeMargen; }
+.pdb1{ padding-bottom: 1 * $unidadDeMargen; }
+.pdb2{ padding-bottom: 2 * $unidadDeMargen; }
+.pdb3{ padding-bottom: 3 * $unidadDeMargen; }
+.pdb4{ padding-bottom: 4 * $unidadDeMargen; }
+.pdl1{ padding-left: 1 * $unidadDeMargen; }
+.pdl2{ padding-left: 2 * $unidadDeMargen; }
+.pdl3{ padding-left: 3 * $unidadDeMargen; }
+.pdl4{ padding-left: 4 * $unidadDeMargen; }
+.pdr1{ padding-right: 1 * $unidadDeMargen; }
+.pdr2{ padding-right: 2 * $unidadDeMargen; }
+.pdr3{ padding-right: 3 * $unidadDeMargen; }
+.pdr4{ padding-right: 4 * $unidadDeMargen; }
+
 .video-holder{
 	background: url('../images/iphone5s.png') no-repeat 1px 1px;
 	float: left;
@@ -33,6 +70,9 @@ Aquí empiezan los estilos de la corporación
 		margin: 0 1em;
 	}
 }
+.figure-hold{
+	clear: both;
+}
 figure{
 	padding: 1em;
 	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
@@ -40,4 +80,80 @@ figure{
 		margin-top: 0.25em;
 	}
 	em,i{font-style: italic;}
+	&.flotada{
+		margin:1em;
+		img,figcaption{
+		//	float: left;
+			display: inline-block;
+			max-width: 60%;
+			.derecha &{
+				//float: left;
+			}
+		}
+		figcaption{
+			max-width: 39%;
+		}
+	}
+	table{
+		width: 100%;
+	}
+	tr:nth-child(even){
+		background-color: #f0f0f0;
+	}
+	td, th{
+		padding:0.25em 0.5em;
+		border-left: 1px solid #999;
+		&:first-child{
+			border-left: none;
+		}
+	}
+	th{
+		font-family: "museo500";
+		font-weight:500;
+		font-size:1.25em;
+	}
+	i{
+		color: $positive;
+	}
+}
+.lista-figures{
+	display: inline-block;
+	padding-left: 0;
+	margin-left: 0;
+	margin-top: 0.5em;
+	li{
+		margin-top: 0;
+		margin-left: 1.5em;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+}
+.ventajas{
+	background-color: #F9F9F9;
+}
+.relato{
+	clear:both;
+	.generic-heading{
+		margin-bottom: 1em;
+		.title-line{
+			max-width: 700px;
+			margin: 0 auto 2em auto;
+		}
+	}
+	.text-box,
+	.blog-box .text-box{
+		padding: 0 2.5%;
+		box-sizing: border-box;
+		hr{
+			clear: both;
+		}
+		blockquote{
+			float: none;
+		}
+	}
+}
+.precio{
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	text-align: right;
 }

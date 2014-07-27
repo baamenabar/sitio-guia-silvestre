@@ -5,6 +5,8 @@ jQuery(document).ready(function ($) {
         $(this).attr('rel', $(this).data('rel'));
     });
 
+    
+
     /*
     //Recent News Posts Images Effect
     $(' #da-thumbs > li ').each(function () {
@@ -438,4 +440,12 @@ jQuery(document).ready(function ($) {
     }
 //*/
     //Function End
+});
+
+$(window).load(function(){
+    //fix de layout para los <figure>
+    var figs = $('figure','#main').not('.flotada');
+    figs.each(function(i,ele){
+        $(ele).css('max-width', $(ele).find('img').width());
+    });
 });
