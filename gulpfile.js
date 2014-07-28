@@ -22,7 +22,7 @@ gulp.task('sass', function() {
     sourceComments: 'normal'
   }))
   .pipe(autoprefixer(["last 3 versions", "> 0.5%", "ie 8", "ie 7", "Android 2"]))
-  .pipe(minifycss())//estaba pesando 309KB
+  //.pipe(minifycss())//estaba pesando 309KB
   .pipe(uncss({
             html: ['./src/index.html'],
             ignore:[/.*bx-wrapper*.*/, /.*bx-viewport*.*/, /.*bx-controls-direction*.*/]

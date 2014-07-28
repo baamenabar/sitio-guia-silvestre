@@ -191,3 +191,11 @@ figure{
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	text-align: right;
 }
+.lista-logos{
+	color: #555;
+	li{
+		vertical-align: top;
+		display: inline-block;
+		margin-left: 1em;
+	}
+}

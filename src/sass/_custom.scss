@@ -724,12 +724,14 @@ strong.logo a em{
 	position:absolute;
 	left:0;
 	bottom:140px;
-	width:100%;
+	//width:100%;
+	width:auto;
 	margin:0 auto;
+	padding: 0 2em;
 	z-index:9;
 }
 #banner .caption .holder {
-	width:1170px;
+	max-width:1170px;
 	margin:0 auto;
 }
 #banner .caption h1 {
