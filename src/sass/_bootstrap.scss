@@ -232,12 +232,14 @@ body {
 a {
   color: #0088cc;
   text-decoration: none;
+  border-bottom: 1px dotted #0088cc;
 }
 
 a:hover,
 a:focus {
   color: #005580;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid #005580;
 }
 
 .img-rounded {

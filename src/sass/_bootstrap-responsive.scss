@@ -78,8 +78,12 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
+.logo.guia{
+	width:40%;
+}
 .top-bar-outer{
-	width:100%;
+	//width:100%;
+	width: 59%;
 }
 #nav li{
 	float:none;
@@ -1213,6 +1217,7 @@ input.span1,  textarea.span1,  .uneditable-input.span1 {
 }
 .navigation-box.home-page{
 	top:320px;
+	position: static;
 }
 strong.logo{
 	width:100%;
@@ -1322,6 +1327,9 @@ body {
 	float: none;
 	margin-left: 0;
 }
+#banner #bx-pager{
+	display: none;
+}
  [class*="span"],  .uneditable-input[class*="span"],  .row-fluid [class*="span"] {
  display: block;
  float: none;
@@ -1376,12 +1384,29 @@ body{
 }
 .container{
 	padding:0 10px;
+	position: relative;
+	/*top:0;
+	left: 0;*/
 }
 .navigation-box{
 	width:100%;
 }
 .navigation-box.home-page{
-	top:270px;
+	top:200px;
+	position: static;
+}
+.logo.guia{
+	width: 40%;
+}
+.bottom-row{
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 60%;
+	strong.title{
+		font-size: 21px;
+		line-height: 1.25em;
+	}
 }
 #main{
 	margin:265px 0 0 0;
@@ -2576,6 +2601,13 @@ body {
 		position: absolute;
 		bottom: -121px;
 		z-index: 2;
+	}
+	.top-bar-outer{
+		max-width: 70%;
+	}
+	.logo.guia{
+		float: left;
+		max-width: 30%;
 	}
 	#banner #bx-pager {
 	    position: absolute;

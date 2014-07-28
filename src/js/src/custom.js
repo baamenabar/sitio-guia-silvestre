@@ -13,13 +13,14 @@ jQuery(document).ready(function ($) {
         $(this).hoverdir();
     });
     //*/
-
+/*
     //Recent News Post Slider 
     if ($('.recent-slider').length) {
         $('.recent-slider').bxSlider({
             pagerCustom: '#bx-pager-cp'
         });
     }
+    //*/
 
     /*
     //Next Event Contdown
@@ -42,7 +43,7 @@ jQuery(document).ready(function ($) {
         $('#year').text(austDay.getFullYear());
     }
     //*/
-
+/*
     //Latest Blog Slider 
     if ($('#latest-blog-slider').length) {
         $('#latest-blog-slider').bxSlider({
@@ -75,7 +76,9 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+    //*
 
+/*
     //Parallax Effect
     //$(window).stellar();
 
@@ -168,6 +171,7 @@ jQuery(document).ready(function ($) {
             }
         })(marker, i));
     }
+    //*/
 
 /*
     //Google Map Event Detail
@@ -342,7 +346,7 @@ jQuery(document).ready(function ($) {
         });
     }
     //*/
-//*
+/*
     //Timeline 
     if ($('.timeline-slider').length) {
 
@@ -439,6 +443,15 @@ jQuery(document).ready(function ($) {
         });
     }
 //*/
+    
+    //fix de layout para los <figure>
+    var figs = $('figure','#main').not('.flotada');
+    figs.each(function(i,ele){
+        $(ele).find('img').load(function() {
+            $(ele).css('max-width', $(ele).find('img').width());
+        });
+    });
+
     //Function End
 });
 

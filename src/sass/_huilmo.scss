@@ -40,6 +40,17 @@ $unidadDeMargen:0.5em;
 .pdr3{ padding-right: 3 * $unidadDeMargen; }
 .pdr4{ padding-right: 4 * $unidadDeMargen; }
 
+.logo{
+	&.guia{
+		max-width: 240px;
+		float:left;
+		padding:0.25em;
+		background-color: #FFF;
+		position:relative;
+		z-index: 5;
+	}
+}
+
 .video-holder{
 	background: url('../images/iphone5s.png') no-repeat 1px 1px;
 	float: left;
@@ -103,6 +114,7 @@ figure{
 	td, th{
 		padding:0.25em 0.5em;
 		border-left: 1px solid #999;
+		vertical-align: middle;
 		&:first-child{
 			border-left: none;
 		}
@@ -113,7 +125,10 @@ figure{
 		font-size:1.25em;
 	}
 	i{
-		color: $positive;
+		color: $verde;//$positive;
+	}
+	i.fa{
+		font-style: normal;
 	}
 }
 .lista-figures{
@@ -134,6 +149,7 @@ figure{
 }
 .relato{
 	clear:both;
+	i,em{font-style:italic}
 	.generic-heading{
 		margin-bottom: 1em;
 		.title-line{
@@ -148,9 +164,27 @@ figure{
 		hr{
 			clear: both;
 		}
-		blockquote{
+		blockquote, strong{
 			float: none;
 		}
+	}
+}
+.comparacion{
+	.uno{
+		width: 180px;
+	}
+	td{
+		i.fa{
+			font-size: 1.75em;
+			position: relative;
+			bottom: -5px;
+		}
+	}
+	.si{
+		color: $verde;
+	}
+	.no, .no i{
+		color: $rojo;
 	}
 }
 .precio{

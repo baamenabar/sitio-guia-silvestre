@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var htmlmin = require('gulp-htmlmin');
+var uncss = require('gulp-uncss');
 
 // Styles
 gulp.task('sass', function() {
@@ -21,7 +22,10 @@ gulp.task('sass', function() {
     sourceComments: 'normal'
   }))
   .pipe(autoprefixer(["last 3 versions", "> 0.5%", "ie 8", "ie 7", "Android 2"]))
-  //.pipe(minifycss())
+  .pipe(minifycss())//estaba pesando 309KB
+  .pipe(uncss({
+            html: ['./src/index.html']
+        }))//lo dejó pesando 72KB (WOW)
   .pipe(gulp.dest('./build/css'))
   .pipe(livereload());
 });
@@ -31,7 +35,7 @@ gulp.task('scripts', function() {
     gulp.src([
       'src/js/src/*.js'
     ]).pipe(concat('scripts.js'))
-      //.pipe(uglify())
+      .pipe(uglify())
       .pipe(gulp.dest('./build/js'));
 
     gulp.src([
@@ -67,7 +71,7 @@ gulp.task('html', function() {
     .pipe(htmlmin({
     	//opciones: https://github.com/kangax/html-minifier
     	collapseWhitespace: true,
-    	removeComments:false
+    	removeComments:true
     }))
     .pipe(gulp.dest('./build'));
 });
