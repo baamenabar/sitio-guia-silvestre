@@ -778,7 +778,10 @@ strong.logo a em{
 	position:relative;
 	display: none;
 }
-/*#home-banner > li:first-child,*/
+.bx-viewport #home-banner > li:first-child{
+	z-index: 0;
+	display: none;
+}
 .bx-viewport #home-banner > li{
 	display: block;
 }

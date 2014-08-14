@@ -338,10 +338,9 @@ jQuery(document).ready(function ($) {
     if ($('#home-banner').length) {
         $('#home-banner').bxSlider({
             pagerCustom: '#bx-pager',
-            //randomStart: true,
             speed: 800,
+            //autoStart: true,
             auto:true,
-            autoStart: true,
             pause: 7000
         });
     }
