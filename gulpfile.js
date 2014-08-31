@@ -68,7 +68,7 @@ gulp.task('imagenes', function () {
 
 gulp.task('html', function() {
   //gulp.src('./src/*.html')
-  gulp.src('./src/index.html')
+  gulp.src(['./src/index.html', './src/english.html'])
     .pipe(htmlmin({
     	//opciones: https://github.com/kangax/html-minifier
     	collapseWhitespace: true,
